@@ -11,7 +11,7 @@ function Display()
     const {tech}=useParams();
     // const [status,setstatus]=useState(null);
     useEffect(()=>{
-        axios.get('http://localhost:7000/getdata')
+        axios.get('https://backend-2-4g8q.onrender.com/getdata')
         .then((result)=>{
             const filteredData = result.data.data.filter(ele => ele.course === tech);
             setdata(filteredData);
@@ -20,7 +20,7 @@ function Display()
     function deletee(id){
         if(window.confirm("are you sure"))
         {
-        axios.delete('http://localhost:7000/delete-user/'+id).then(result=>{
+        axios.delete('https://backend-2-4g8q.onrender.com/delete-user/'+id).then(result=>{
             alert(result.data.message)
             // window.location.reload();
         })
@@ -30,7 +30,7 @@ function Display()
     {
         console.log("collected-data");
         handledit(id);
-        axios.get('http://localhost:7000/getByid/'+id)
+        axios.get('https://backend-2-4g8q.onrender.com/getByid/'+id)
         .then(result=>{console.log(result.data.result.userdetails)})
     }
     function savedata(id)
@@ -42,9 +42,9 @@ function Display()
                 tempdata=ele;
         });
         console.log("update function")
-        axios.put('http://localhost:7000/update-user/'+id,tempdata).then(result=>{alert(result.data.msg)})
+        axios.put('https://backend-2-4g8q.onrender.com/update-user/'+id,tempdata).then(result=>{alert(result.data.msg)})
         .then(()=>{
-        axios.get('http://localhost:7000/getByid/'+id)
+        axios.get('https://backend-2-4g8q.onrender.com/getByid/'+id)
         .then(result=>{console.log(result.data.result.userdetails)})
         })
     }

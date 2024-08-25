@@ -8,13 +8,13 @@ const TrainerMainpage=()=>{
     const {details,setdetails}=useUser();
     // console.log(details)
     // useEffect(()=>{
-    //     axios.get(`http://localhost:7000/gettrainByid/${id}`)
+    //     axios.get(`https://backend-2-4g8q.onrender.com/gettrainByid/${id}`)
     //     .then((res)=>{
     //         // setdetails(res.data.details);
     //     })
     // },[])
     const startatd=()=>{
-            // axios.put('http://localhost:7000/start-attendence',details)
+            // axios.put('https://backend-2-4g8q.onrender.com/start-attendence',details)
             // .then((res)=>{console.log(res.data)})
     }
     return(
@@ -23,7 +23,7 @@ const TrainerMainpage=()=>{
         <Link to={`Displaystudent/${details.Technology}`} className="card-link">
             <div className="Studentcard ">
             <div className="pic">
-                    <img src="http://localhost:7000/images/studprofile.png" alt="Student Avatar" />
+                    <img src="https://backend-2-4g8q.onrender.com/images/studprofile.png" alt="Student Avatar" />
                 </div>
                 <div className="student-details">
                     <h2>Student List</h2>
@@ -33,7 +33,7 @@ const TrainerMainpage=()=>{
             <Link to={`Trainerpage/${details.Technology}`} className="card-link" onClick={startatd}>
             <div className="Studentcard">
             <div className="pic">
-                    <img src="http://localhost:7000/images/studprofile.png" alt="Student Avatar" />
+                    <img src="https://backend-2-4g8q.onrender.com/images/studprofile.png" alt="Student Avatar" />
                 </div>
                 <div className="student-details">
                     <h2>Take Attendance</h2>

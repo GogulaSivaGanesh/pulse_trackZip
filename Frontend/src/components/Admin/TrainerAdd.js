@@ -27,7 +27,7 @@ function AddTrainer() {
         e.preventDefault();
         setFormdata({...formdata,AttendanceTaken:true});
         console.log(formdata)
-        axios.post('http://localhost:7000/addtrainer',formdata)
+        axios.post('https://backend-2-4g8q.onrender.com/addtrainer',formdata)
         .then((result)=>
         {
             console.log(result.data);
@@ -49,7 +49,7 @@ function AddTrainer() {
     <MDBContainer fluid  className="p-3 my-5">
       <MDBRow>
       <MDBCol col='10' md='6'>
-          <img src="http://localhost:7000/images/login.png" className="img-fluid" alt="Phone image" />
+          <img src="https://backend-2-4g8q.onrender.com/images/login.png" className="img-fluid" alt="Phone image" />
         </MDBCol>
         <MDBCol col='4' md='4'>  
           <div className='d-flex justify-content-around text-center mb-2'>

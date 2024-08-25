@@ -10,7 +10,7 @@ const Admin=()=>{
         <Link to={`Displayall`} className="card-link">
             <div className="Studentcard ">
             <div className="pic">
-                    <img src="http://localhost:7000/images/studprofile.png" alt="Student Avatar" />
+                    <img src="https://backend-2-4g8q.onrender.com/images/studprofile.png" alt="Student Avatar" />
                 </div>
                 <div className="student-details">
                     <h2>Student List</h2>
@@ -20,7 +20,7 @@ const Admin=()=>{
             <Link to={`AddTrainer`} className="card-link" >
             <div className="Studentcard ">
             <div className="pic">
-                    <img src="http://localhost:7000/images/studprofile.png" alt="Student Avatar" />
+                    <img src="https://backend-2-4g8q.onrender.com/images/studprofile.png" alt="Student Avatar" />
                 </div>
                 <div className="student-details">
                     <h2>Add trainer</h2>
@@ -30,7 +30,7 @@ const Admin=()=>{
             <Link to={`Trainerlist`} className="card-link" >
             <div className="Studentcard ">
             <div className="pic">
-                    <img src="http://localhost:7000/images/studprofile.png" alt="Student Avatar" />
+                    <img src="https://backend-2-4g8q.onrender.com/images/studprofile.png" alt="Student Avatar" />
                 </div>
                 <div className="student-details">
                     <h2>Trainer List</h2>

@@ -23,13 +23,13 @@ function Attendance() {
         'attendence':false
     })
     const startsession=async()=>{
-      const response=await axios.get('http://localhost:7000/start-attendence/'+details._id);
+      const response=await axios.get('https://backend-2-4g8q.onrender.com/start-attendence/'+details._id);
     }
     const check=(e)=>{
       e.preventDefault();
        setFormdata({...formdata,attendence:true});
        console.log(formdata)
-        axios.put('http://localhost:7000/check-attendence',formdata)
+        axios.put('https://backend-2-4g8q.onrender.com/check-attendence',formdata)
         .then((result)=>{
             setval(result.data.value);
             setmsg(result.data.msg);
@@ -40,7 +40,7 @@ function Attendance() {
     <div  className="container-fluid p-3 my-5">
       <div className='row'>
         <div  className="col-10 col-md-6">
-          <img src="http://localhost:7000/images/login.png" className="img-fluid" alt="Phone image" />
+          <img src="https://backend-2-4g8q.onrender.com/images/login.png" className="img-fluid" alt="Phone image" />
         </div>
         <div className='col-4 col-md-4'> 
           <div className='d-flex justify-content-around text-center mb-2'>

@@ -41,7 +41,7 @@ function Signup() {
     const handlesubmit = (e)=>{
         e.preventDefault();
         console.log(formdata)
-        axios.post('http://localhost:7000/adduser',formdata)
+        axios.post('https://backend-2-4g8q.onrender.com/adduser',formdata)
         .then((result)=>
         {
             alert(result.data.msg);
@@ -55,7 +55,7 @@ function Signup() {
 
       <MDBRow>
         <MDBCol col='10' md='6'>
-          <img src="http://localhost:7000/images/login.png" className="img-fluid" alt="Phone image" />
+          <img src="https://backend-2-4g8q.onrender.com/images/login.png" className="img-fluid" alt="Phone image" />
         </MDBCol>
         <MDBCol col='4' md='4'> 
         <div className='d-flex justify-content-around text-center mb-2'>

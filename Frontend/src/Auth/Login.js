@@ -33,11 +33,11 @@ function FrontPage() {
     }
     const check=async(e)=>{
         e.preventDefault();
-        axios.post('http://localhost:7000/check-login',formdata)
+        axios.post('https://backend-2-4g8q.onrender.com/check-login',formdata)
         .then((result)=>{
             if(result.data.loggedin){
               // console.log(result.data);
-              axios.get('http://localhost:7000/dashboard',{
+              axios.get('https://backend-2-4g8q.onrender.com/dashboard',{
                       headers:{
                         'Authorization':`${result.data.token}`
                       }
@@ -62,7 +62,7 @@ function FrontPage() {
       <MDBRow>
 
         <MDBCol col='10' md='6'>
-          <img src="http://localhost:7000/images/login.png" className="img-fluid" alt="Phone image" data-aos="zoom-out" data-aos-delay="200"/>
+          <img src="https://backend-2-4g8q.onrender.com/images/login.png" className="img-fluid" alt="Phone image" data-aos="zoom-out" data-aos-delay="200"/>
         </MDBCol>
         <MDBCol col='4' md='4'> 
           <div className='d-flex justify-content-around text-center mb-2' >

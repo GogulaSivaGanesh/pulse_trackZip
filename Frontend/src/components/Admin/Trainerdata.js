@@ -11,7 +11,7 @@ function TrainerData()
     const {tech}=useParams();
     // const [status,setstatus]=useState(null);
     useEffect(()=>{
-        axios.get('http://localhost:7000/gettrain')
+        axios.get('hhttps://backend-2-4g8q.onrender.com/gettrain')
         .then((result)=>{
             setdata(result.data.data);
         });
@@ -19,7 +19,7 @@ function TrainerData()
 
     function deletee(id){
         if(window.confirm("are you sure")){
-        axios.delete('http://localhost:7000/delete-trainer/'+id).then(result=>{
+        axios.delete('https://backend-2-4g8q.onrender.com/delete-trainer/'+id).then(result=>{
             alert(result.data.message)
 
             // window.location.reload();
@@ -31,7 +31,7 @@ function TrainerData()
     {
         console.log("collected-data");
         handledit(id);
-        axios.get('http://localhost:7000/gettrainByid/'+id)
+        axios.get('https://backend-2-4g8q.onrender.com/gettrainByid/'+id)
         .then(result=>{console.log(result.data.userdetails)})
     }
     function savedata(id)
@@ -43,9 +43,9 @@ function TrainerData()
                 tempdata=ele;
         });
         console.log("update function")
-        axios.put('http://localhost:7000/update-trainer/'+id,tempdata).then(result=>{alert(result.data.msg)})
+        axios.put('https://backend-2-4g8q.onrender.com/update-trainer/'+id,tempdata).then(result=>{alert(result.data.msg)})
         .then(()=>{
-        axios.get('http://localhost:7000/gettrainByid/'+id)
+        axios.get('https://backend-2-4g8q.onrender.com/gettrainByid/'+id)
         .then(result=>{console.log(result.data.userdetails)})
         })
     }

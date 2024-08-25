@@ -14,7 +14,7 @@ export const UserProvider = ({ children}) => {
     useEffect(()=>{
       if(user)
       {
-      axios.get('http://localhost:7000/dashboard',{
+      axios.get('https://backend-2-4g8q.onrender.com/dashboard',{
         headers:{
           'Authorization':`${user}`
         }
